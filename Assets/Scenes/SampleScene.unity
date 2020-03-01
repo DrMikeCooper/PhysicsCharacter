@@ -341,6 +341,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!135 &777043142 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 2212293236469899731, guid: c7471157589ef874abad797628d9171e,
+    type: 3}
+  m_PrefabInstance: {fileID: 2212293236097621269}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &925944682
 GameObject:
   m_ObjectHideFlags: 0
@@ -739,6 +745,12 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!135 &1370341232 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 1370341232, guid: c7471157589ef874abad797628d9171e,
+    type: 3}
+  m_PrefabInstance: {fileID: 2212293236097621269}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1902275578
 GameObject:
   m_ObjectHideFlags: 0
@@ -1177,15 +1189,70 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2212293235814567762, guid: c7471157589ef874abad797628d9171e,
+    - target: {fileID: 2212293236469899731, guid: c7471157589ef874abad797628d9171e,
         type: 3}
-      propertyPath: m_UpdateMode
-      value: 0
+      propertyPath: m_Radius
+      value: 0.15
       objectReference: {fileID: 0}
-    - target: {fileID: 2212293235814567773, guid: c7471157589ef874abad797628d9171e,
-        type: 3}
-      propertyPath: ragdoll
-      value: 1
+    - target: {fileID: 1285685420, guid: c7471157589ef874abad797628d9171e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2b3f3553fdc7f9b47b3c6485c68de28d, type: 2}
+    - target: {fileID: 1285685419, guid: c7471157589ef874abad797628d9171e, type: 3}
+      propertyPath: m_SphereColliders.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1285685419, guid: c7471157589ef874abad797628d9171e, type: 3}
+      propertyPath: m_SphereColliders.Array.data[1].first
+      value: 
+      objectReference: {fileID: 777043142}
+    - target: {fileID: 1285685419, guid: c7471157589ef874abad797628d9171e, type: 3}
+      propertyPath: m_SphereColliders.Array.data[1].second
+      value: 
+      objectReference: {fileID: 1370341232}
+    - target: {fileID: 1285685419, guid: c7471157589ef874abad797628d9171e, type: 3}
+      propertyPath: m_Coefficients.Array.data[0].maxDistance
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1285685419, guid: c7471157589ef874abad797628d9171e, type: 3}
+      propertyPath: m_Coefficients.Array.data[1].maxDistance
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1285685419, guid: c7471157589ef874abad797628d9171e, type: 3}
+      propertyPath: m_Coefficients.Array.data[2].maxDistance
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1285685419, guid: c7471157589ef874abad797628d9171e, type: 3}
+      propertyPath: m_Coefficients.Array.data[3].maxDistance
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1285685419, guid: c7471157589ef874abad797628d9171e, type: 3}
+      propertyPath: m_Coefficients.Array.data[4].maxDistance
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1285685419, guid: c7471157589ef874abad797628d9171e, type: 3}
+      propertyPath: m_Coefficients.Array.data[5].maxDistance
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1285685419, guid: c7471157589ef874abad797628d9171e, type: 3}
+      propertyPath: m_Coefficients.Array.data[6].maxDistance
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1285685419, guid: c7471157589ef874abad797628d9171e, type: 3}
+      propertyPath: m_Coefficients.Array.data[7].maxDistance
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1285685419, guid: c7471157589ef874abad797628d9171e, type: 3}
+      propertyPath: m_Coefficients.Array.data[8].maxDistance
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1285685419, guid: c7471157589ef874abad797628d9171e, type: 3}
+      propertyPath: m_Coefficients.Array.data[9].maxDistance
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1285685419, guid: c7471157589ef874abad797628d9171e, type: 3}
+      propertyPath: m_Coefficients.Array.data[10].maxDistance
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7471157589ef874abad797628d9171e, type: 3}
