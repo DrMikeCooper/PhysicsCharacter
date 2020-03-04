@@ -7,11 +7,13 @@ public class Ragdoll : MonoBehaviour
     Rigidbody[] rigidbodies;
     Animator animator;
     public bool ragdoll = false;
+    CharacterController cc;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
+        cc = GetComponent<CharacterController>();
         rigidbodies = GetComponentsInChildren<Rigidbody>();
         SetRagdoll(ragdoll);
     }
@@ -30,6 +32,7 @@ public class Ragdoll : MonoBehaviour
         ragdoll = on;
 
         animator.enabled = !on;
+        cc.enabled = !on;
         foreach (Rigidbody rb in rigidbodies)
             rb.isKinematic = !on;
     }

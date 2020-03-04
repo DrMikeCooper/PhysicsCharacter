@@ -20,21 +20,38 @@ public class CharacterMover : MonoBehaviour
 
     Animator animator;
 
+    Camera cam;
+
     // Start is called before the first frame update
     void Start()
     {
         cc = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
+
+        cam = Camera.main;
     }
+
+    public float m_facing;
 
     // Update is called once per frame
     void Update()
     {
-        m_movement.x = Input.GetAxis("Horizontal") *m_speed;
-        m_movement.y = 0;
-        m_movement.z = Input.GetAxis("Vertical") * m_speed;
+        Vector3 camRight = cam.transform.right;
+        Vector3 camFwd = cam.transform.forward;
+        camFwd.y = 0;
+        camFwd.Normalize();
+        m_movement = (Input.GetAxis("Horizontal") * camRight + Input.GetAxis("Vertical") * camFwd) * m_speed;
+
+        //m_movement = (Input.GetAxis("Horizontal") * Vector3.right +Input.GetAxis("Vertical") * Vector3.forward)* m_speed;
+
         m_jump = Input.GetButtonDown("Jump");
 
+        if (m_movement.x != 0 || m_movement.z != 0)
+        {
+            m_facing = Mathf.Rad2Deg * Mathf.Atan2(m_movement.x, m_movement.z);
+        }
+
+        transform.eulerAngles = Vector3.up * Mathf.MoveTowardsAngle(transform.eulerAngles.y, m_facing, 360 * Time.deltaTime);
         animator.SetBool("Jump", !m_grounded);
         animator.SetFloat("Forwards", m_movement.magnitude);
         animator.SetBool("Crouch", Input.GetKey(KeyCode.C));
